@@ -4,18 +4,21 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CertiFAKE</title>
+		<title>certiFAKE™</title>
 		<link rel="stylesheet" href="index.css" type="text/css" />
 	</head>
 	<body>
-		<h3>Welcome to CertiFAKE</h3>
-		<div>
-			<input type="text" />
-			<input type="text" />
-			<input type="text" />
+		<h3>Welcome to <span class="save-as">certiFAKE™</span></h3>
+		<div class='input-container'>
+			<input id="subject" type="text" placeholder="e.g. 2022"/>
+			<input id="year" type="text" placeholder="e.g. GENIUS"/>
+			<button id="create-certificate">Create certiFAKE</button>
 		</div>
 		<div class="canvas-container">
-			<canvas id="certificate-render" height="400" width="400"> </canvas>
+			<canvas id="certificate-canvas" height="400" width="400"> </canvas>
+			<p class="export-tip">
+				Right click </br><span class="save-as">Save image as...</span>
+			</p>
 		</div>
 	</body>
 	<script src="index.js"></script>
