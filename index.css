@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	background-color: rgb(232, 232, 232);
+}
+
+h3 {
+	color: rgb(164, 54, 54);
+}
+
+.canvas-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vw;
+	background-color: rgb(223, 223, 223);
+	margin: 3vw 0;
+}
+
+#certificate-render {
+	/* border: 1px black solid; */
+	background-color: rgb(247, 247, 247);
+}

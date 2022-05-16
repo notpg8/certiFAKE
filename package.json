@@ -1,0 +1,11 @@
+{
+  "name": "certifake",
+  "version": "1.0.0",
+  "description": "A tool to generate FAKE certificates to make fun of the LinkedIn certifications spam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "notpg8",
+  "license": "MIT"
+}
