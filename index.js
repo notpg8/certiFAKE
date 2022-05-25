@@ -12,39 +12,12 @@ class Badge {
 		this.maxWidthField2 = this.centerCoordinates.xCenter / 2 + 30
 	}
 
-	radialGradient() {
-		const ctx = this.ctx
-
-		// Create gradient
-		var grd = ctx.createRadialGradient(
-			this.centerCoordinates.xCenter,
-			this.centerCoordinates.yCenter,
-			5,
-			this.centerCoordinates.xCenter,
-			this.centerCoordinates.yCenter,
-			50
-		)
-		grd.addColorStop(0, 'red')
-		grd.addColorStop(1, 'yellow')
-
-		// Fill with gradient
-		ctx.fillStyle = grd
-		ctx.fill()
-	}
-
 	linearGradient() {
 		const ctx = this.ctx
-		// Create a linear gradient
-		// The start gradient point is at x=20, y=0
-		// The end gradient point is at x=220, y=0
 		var gradient = ctx.createLinearGradient(20, 0, 220, 0)
-
-		// Add three color stops
 		gradient.addColorStop(0, '#FEDB37')
 		gradient.addColorStop(0.4, '#FDB931')
 		gradient.addColorStop(1, '#FEDB37')
-
-		// Set the fill style and draw a rectangle
 		ctx.fillStyle = gradient
 		ctx.fill()
 		ctx.lineWidth = 4
@@ -71,9 +44,6 @@ class Badge {
 		switch (type) {
 			case 'linear':
 				this.linearGradient()
-				break
-			case 'radial':
-				this.radialGradient()
 				break
 
 			default:
@@ -146,7 +116,7 @@ class Badge {
 	createBadge({ subject = 'GENIUS', year = 1991 }) {
 		this.drawHexagon('linear', 120)
 		this.drawCertified(`${subject}`)
-		this.drawCertiFAKE('certiFAKE™', 90)
+		this.drawCertiFAKE('certiFAKE', 90)
 		this.drawStars('★★★★★', 70)
 		this.drawYear(`${year}`)
 	}
